@@ -8,8 +8,8 @@ import (
 	"net"
 	"net/http"
 
-	"github.com/siyibai/file-transfer/config"
-	fileServer "github.com/siyibai/file-transfer/gateway"
+	"github.com/baisiyi/file_trans/config"
+	fileServer "github.com/baisiyi/file_trans/gateway"
 	pb "github.com/siyibai/file-transfer/pb"
 
 	"github.com/grpc-ecosystem/grpc-gateway/v2/runtime"
@@ -40,7 +40,7 @@ func main() {
 	pb.RegisterFileServiceServer(grpcServer, fileServer.NewFileService())
 	// 在后台运行 gRPC 服务器
 	go func() {
-		log.Printf("gRPC server starting on :50051")
+		log.Printf("gRPC server starting on :%d", cfg.Server.GRPCPort)
 		if err := grpcServer.Serve(lis); err != nil {
 			log.Fatalf("failed to serve: %v", err)
 		}
@@ -90,6 +90,7 @@ func main() {
 	})
 
 	// 启动 HTTP 服务
+	fmt.Println(cfg.Server)
 	addr := fmt.Sprintf("%s:%d", cfg.Server.Host, cfg.Server.HTTPPort)
 	log.Printf("HTTP GateWay starting on %s", addr)
 	if err := http.ListenAndServe(addr, loggingHandler); err != nil {

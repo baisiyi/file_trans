@@ -7,6 +7,7 @@ import (
 )
 
 type fileServiceImpl struct {
+	fileLogic filelogic.FileLogic
 	pb.UnimplementedFileServiceServer // 添加这一行
 }
 
@@ -17,6 +18,7 @@ func (f fileServiceImpl) GetFileList(ctx context.Context, req *pb.GetFileListReq
 		FileName: "test.txt",
 		FileSize: 1024,
 	})
+	rsp, err = f.
 	return
 }
 

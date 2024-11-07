@@ -1,9 +1,23 @@
 package db
 
-type DbReader interface{}
+import (
+	"context"
 
-type DbWriter interface{}
+	"github.com/siyibai/file-transfer/models/table"
+)
+
+type DbReader interface {
+	GetListByCondition(ctx context.Context, where string, args []interface{}) ([]*table.FileMeta, error)
+}
+
+type DbWriter interface {
+	CreateFile(ctx context.Context, fileMeta *table.FileMeta) error
+}
 
 func NewDbWriter() DbWriter {
 	return newWriterImpl()
+}
+
+func NewDbReader() DbReader {
+	return newReaderImpl()
 }

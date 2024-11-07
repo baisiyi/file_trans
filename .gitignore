@@ -1,1 +1,4 @@
 .vscode/
+backend/uploads/
+backend/config/config.yaml
+backend/file_server

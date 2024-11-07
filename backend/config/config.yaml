@@ -1,14 +1,14 @@
 server:
   http_port: 8080
   grpc_port: 50051
-  host: "0.0.0.0"
+  host: "192.168.18.112"
 
 database:
   host: "localhost"
   port: 3306
   user: "root"
-  password: "123456"
-  dbname: "file_transfer"
+  password: "199897"
+  dbname: "file_trans"
 
 storage:
   path: "./uploads"
@@ -19,6 +19,7 @@ cors:
     - "http://localhost:5173"
     - "http://127.0.0.1:5173"
     - "http://192.168.18.112:5173"
+    - "http://59.110.46.76:8081"
   allowed_methods:
     - "GET"
     - "POST"

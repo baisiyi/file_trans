@@ -1,3 +1,0 @@
-.PHONY: proto
-proto:
-	./scripts/gen-proto.sh

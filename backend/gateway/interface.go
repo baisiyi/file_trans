@@ -5,5 +5,7 @@ import (
 )
 
 func NewFileService() pb.FileServiceServer {
-	return &fileServiceImpl{}
+	return &fileServiceImpl{
+		fileLogic: filelogic.NewFileLogic(),
+	}
 }

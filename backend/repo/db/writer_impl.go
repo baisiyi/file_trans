@@ -3,10 +3,10 @@ package db
 import (
 	"context"
 
+	"github.com/baisiyi/file_trans/config"
+	"github.com/baisiyi/file_trans/models/table"
 	db "github.com/baisiyi/gorm_helper/mysql/db"
 	dbHelper "github.com/baisiyi/gorm_helper/mysql/db_helper"
-	"github.com/siyibai/file-transfer/config"
-	"github.com/siyibai/file-transfer/models/table"
 )
 
 type writerImpl struct {
