@@ -1,0 +1,64 @@
+syntax = "proto3";
+
+package file;
+option go_package = "github.com/siyibai/file-transfer/pb;filePb";
+
+import "google/api/annotations.proto";
+
+// 文件服务
+service FileService {
+  // 获取文件列表
+  rpc GetFileList(GetFileListRequest) returns (GetFileListResponse) {
+    option (google.api.http) = {
+      get: "/v1/files"
+    };
+  }
+  
+  // 上传文件
+  rpc UploadFile(UploadFileRequest) returns (UploadFileResponse) {
+    option (google.api.http) = {
+      post: "/v1/files"
+      body: "*"
+    };
+  }
+  
+  // 下载文件
+  rpc DownloadFile(DownloadFileRequest) returns (DownloadFileResponse) {
+    option (google.api.http) = {
+      get: "/v1/files/{file_id}/download"
+    };
+  }
+}
+
+message FileInfo {
+  string id = 1;
+  string file_name = 2;
+  int64 file_size = 3;
+  string upload_time = 4;
+}
+
+message GetFileListRequest {
+  string search = 1;
+}
+
+message GetFileListResponse {
+  repeated FileInfo files = 1;
+}
+
+message UploadFileRequest {
+  bytes content = 1;
+  string file_name = 2;
+}
+
+message UploadFileResponse {
+  string file_id = 1;
+}
+
+message DownloadFileRequest {
+  string file_id = 1;
+}
+
+message DownloadFileResponse {
+  bytes content = 1;
+  string file_name = 2;
+}

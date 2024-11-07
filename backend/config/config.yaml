@@ -1,0 +1,27 @@
+server:
+  http_port: 8080
+  grpc_port: 50051
+  host: "0.0.0.0"
+
+database:
+  host: "localhost"
+  port: 3306
+  user: "root"
+  password: "123456"
+  dbname: "file_transfer"
+
+storage:
+  path: "./uploads"
+  max_size: 104857600  # 100MB in bytes
+
+cors:
+  allowed_origins:
+    - "http://localhost:5173"
+    - "http://127.0.0.1:5173"
+    - "http://192.168.18.112:5173"
+  allowed_methods:
+    - "GET"
+    - "POST"
+    - "PUT"
+    - "DELETE"
+    - "OPTIONS"
