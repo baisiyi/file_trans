@@ -3,7 +3,7 @@ package db
 import (
 	"context"
 
-	"github.com/siyibai/file-transfer/models/table"
+	"github.com/baisiyi/file_trans/models/table"
 )
 
 type DbReader interface {

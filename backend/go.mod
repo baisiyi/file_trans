@@ -1,4 +1,4 @@
-module github.com/siyibai/file-transfer
+module github.com/baisiyi/file_trans
 
 go 1.21.1
 

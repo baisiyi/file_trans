@@ -3,7 +3,7 @@ package fileServer
 import (
 	"context"
 
-	pb "github.com/siyibai/file-transfer/pb"
+	pb "github.com/baisiyi/file_trans/pb"
 )
 
 type fileServiceImpl struct {

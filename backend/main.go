@@ -10,7 +10,7 @@ import (
 
 	"github.com/baisiyi/file_trans/config"
 	fileServer "github.com/baisiyi/file_trans/gateway"
-	pb "github.com/siyibai/file-transfer/pb"
+	pb "github.com/baisiyi/file_trans/pb"
 
 	"github.com/grpc-ecosystem/grpc-gateway/v2/runtime"
 	"github.com/rs/cors"

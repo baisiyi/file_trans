@@ -3,7 +3,7 @@ package filelogic
 import (
 	"context"
 
-	pb "github.com/siyibai/file-transfer/pb"
+	pb "github.com/baisiyi/file_trans/pb"
 )
 
 func (f *fileLogic) GetFileList(ctx context.Context, req *pb.GetFileListRequest) (rsp *pb.GetFileListResponse, err error) {
