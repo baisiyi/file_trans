@@ -1,7 +1,7 @@
 syntax = "proto3";
 
 package file;
-option go_package = "github.com/siyibai/file-transfer/pb;filePb";
+option go_package = "github.com/baisiyi/file_trans/pb;filePb";
 
 import "google/api/annotations.proto";
 

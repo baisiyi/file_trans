@@ -1,13 +1,12 @@
 package fileServer
 
 import (
-	pb "/github.com/baisiyi/file_transpb"
-
 	filelogic "github.com/baisiyi/file_trans/logic/file_logic"
+	pb "github.com/baisiyi/file_trans/pb"
 )
 
 func NewFileService() pb.FileServiceServer {
 	return &fileServiceImpl{
-		fileLogic: filelogic.NewFileLogic(),
+		FileLogic: filelogic.NewFileLogic(),
 	}
 }

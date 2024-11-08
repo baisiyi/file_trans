@@ -4,11 +4,13 @@ import (
 	"context"
 
 	pb "github.com/baisiyi/file_trans/pb"
+
+	filelogic "github.com/baisiyi/file_trans/logic/file_logic"
 )
 
 type fileServiceImpl struct {
-	fileLogic filelogic.FileLogic
 	pb.UnimplementedFileServiceServer // 添加这一行
+	filelogic.FileLogic
 }
 
 func (f fileServiceImpl) GetFileList(ctx context.Context, req *pb.GetFileListRequest) (rsp *pb.GetFileListResponse, err error) {
@@ -18,7 +20,6 @@ func (f fileServiceImpl) GetFileList(ctx context.Context, req *pb.GetFileListReq
 		FileName: "test.txt",
 		FileSize: 1024,
 	})
-	rsp, err = f.
 	return
 }
 

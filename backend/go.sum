@@ -1,7 +1,5 @@
 github.com/baisiyi/gorm_helper v0.0.0-20241106160522-e7ee21c8a3aa h1:h/gwuffP98Q5WREXrMcHWl2xliib0d5JB6LkdZLSGqo=
 github.com/baisiyi/gorm_helper v0.0.0-20241106160522-e7ee21c8a3aa/go.mod h1:3u0cAHg73aEOTIpeLMkTJgig1k1ZK6BSNe91+hXaK2g=
-github.com/baisiyi/gorm_helper v1.0.2 h1:pwKYJVRXRICvbEpWOLXIp/upamox06utc7Ka6mzdjk4=
-github.com/baisiyi/gorm_helper v1.0.2/go.mod h1:3u0cAHg73aEOTIpeLMkTJgig1k1ZK6BSNe91+hXaK2g=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.2-0.20180830191138-d8f796af33cc h1:U9qPSI2PIWSS1VwoXQT9A3Wy9MM3WgvqSxFWenqJduM=

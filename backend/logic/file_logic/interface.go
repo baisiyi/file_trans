@@ -12,9 +12,6 @@ type FileLogic interface {
 	DownloadFile(ctx context.Context, req *pb.DownloadFileRequest) (rsp *pb.DownloadFileResponse, err error)
 }
 
-type fileLogic struct {
-}
-
 func NewFileLogic() FileLogic {
-	return &fileLogic{}
+	return &fileLogicInterface{}
 }
