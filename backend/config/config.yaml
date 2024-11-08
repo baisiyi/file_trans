@@ -26,3 +26,10 @@ cors:
     - "PUT"
     - "DELETE"
     - "OPTIONS"
+minio:
+  endpoint: "localhost:9000"
+  access_key_id: "admin"
+  secret_access_key: "199897"
+  use_ssl: false
+  pool_size: 10
+  max_idle_conns: 5

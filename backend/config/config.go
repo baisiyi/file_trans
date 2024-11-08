@@ -12,6 +12,7 @@ type Config struct {
 	Database DatabaseConfig `yaml:"database" mapstructure:"database"`
 	Storage  StorageConfig  `yaml:"storage" mapstructure:"storage"`
 	Cors     CorsConfig     `yaml:"cors" mapstructure:"cors"`
+	MinioCfg MinioConfig    `yaml:"minio" mapstructure:"minio"`
 }
 
 type ServerConfig struct {
@@ -36,6 +37,15 @@ type StorageConfig struct {
 type CorsConfig struct {
 	AllowedOrigins []string `yaml:"allowed_origins" mapstructure:"allowed_origins"`
 	AllowedMethods []string `yaml:"allowed_methods" mapstructure:"allowed_methods"`
+}
+
+type MinioConfig struct {
+	Endpoint        string `yaml:"endpoint" mapstructure:"endpoint"`
+	AccessKeyID     string `yaml:"access_key_id" mapstructure:"access_key_id"`
+	SecretAccessKey string `yaml:"secret_access_key" mapstructure:"secret_access_key"`
+	UseSSL          bool   `yaml:"use_ssl" mapstructure:"use_ssl"`
+	PoolSize        int    `yaml:"pool_size" mapstructure:"pool_size"`
+	MaxIdleConns    int    `yaml:"max_idle_conns" mapstructure:"max_idle_conns"`
 }
 
 var cfg atomic.Value
